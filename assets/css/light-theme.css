@@ -1,0 +1,364 @@
+/* ==========================================================
+   LIGHT THEME
+   File : light-theme.css
+========================================================== */
+
+body.light-theme {
+
+    --primary: #2563EB;
+    --secondary: #7C3AED;
+    --accent: #0D9488;
+
+    --bg: #F8FAFC;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #F1F5F9;
+
+    --card: #FFFFFF;
+    --card-hover: #F8FAFC;
+
+    --text: #0F172A;
+    --text-light: #475569;
+    --text-muted: #64748B;
+
+    --border: #E2E8F0;
+
+    --shadow: 0 15px 35px rgba(15,23,42,.08);
+
+    --navbar: rgba(255,255,255,.92);
+
+    background: var(--bg);
+    color: var(--text);
+
+    transition: background .4s ease,
+                color .4s ease;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+body.light-theme header{
+
+    background: var(--navbar);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+body.light-theme .logo{
+
+    color: var(--text);
+
+}
+
+body.light-theme .logo span{
+
+    color: var(--primary);
+
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+body.light-theme nav a{
+
+    color: var(--text);
+
+}
+
+body.light-theme nav a:hover{
+
+    color: var(--primary);
+
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+body.light-theme .hero{
+
+    background:
+    radial-gradient(circle at top right,#DBEAFE 0%,transparent 45%),
+    radial-gradient(circle at bottom left,#EDE9FE 0%,transparent 40%),
+    var(--bg);
+
+}
+
+body.light-theme .hero h1{
+
+    color: var(--text);
+
+}
+
+body.light-theme .hero h2{
+
+    color: var(--primary);
+
+}
+
+body.light-theme .hero p{
+
+    color: var(--text-light);
+
+}
+
+/* ===========================
+   Sections
+=========================== */
+
+body.light-theme section{
+
+    background: transparent;
+
+}
+
+body.light-theme .section-title{
+
+    color: var(--text);
+
+}
+
+body.light-theme .section-subtitle{
+
+    color: var(--text-light);
+
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+body.light-theme .card{
+
+    background: var(--card);
+
+    border:1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+}
+
+body.light-theme .card:hover{
+
+    background: var(--card-hover);
+
+    border-color: var(--primary);
+
+    transform: translateY(-8px);
+
+}
+
+/* ===========================
+   Skills
+=========================== */
+
+body.light-theme .skill-card{
+
+    background: var(--card);
+
+}
+
+body.light-theme .skill-card h3{
+
+    color: var(--text);
+
+}
+
+body.light-theme .skill-card p{
+
+    color: var(--text-light);
+
+}
+
+/* ===========================
+   Timeline
+=========================== */
+
+body.light-theme .timeline{
+
+    border-left:3px solid var(--primary);
+
+}
+
+body.light-theme .timeline-item h3{
+
+    color: var(--text);
+
+}
+
+body.light-theme .timeline-item span{
+
+    color: var(--accent);
+
+}
+
+body.light-theme .timeline-item p{
+
+    color: var(--text-light);
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+body.light-theme .btn{
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+body.light-theme .btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+body.light-theme .btn-outline{
+
+    background: transparent;
+
+    border:2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+body.light-theme .btn-outline:hover{
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+/* ===========================
+   Forms
+=========================== */
+
+body.light-theme input,
+body.light-theme textarea{
+
+    background:white;
+
+    color: var(--text);
+
+    border:1px solid var(--border);
+
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder{
+
+    color: var(--text-muted);
+
+}
+
+body.light-theme input:focus,
+body.light-theme textarea:focus{
+
+    border-color: var(--primary);
+
+    box-shadow:0 0 12px rgba(37,99,235,.15);
+
+    outline:none;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+body.light-theme footer{
+
+    background:white;
+
+    border-top:1px solid var(--border);
+
+    color: var(--text-light);
+
+}
+
+/* ===========================
+   Links
+=========================== */
+
+body.light-theme a{
+
+    color: var(--primary);
+
+}
+
+body.light-theme a:hover{
+
+    color:#1D4ED8;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+body.light-theme ::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+body.light-theme ::-webkit-scrollbar-track{
+
+    background:#E2E8F0;
+
+}
+
+body.light-theme ::-webkit-scrollbar-thumb{
+
+    background: var(--primary);
+
+    border-radius:20px;
+
+}
+
+body.light-theme ::-webkit-scrollbar-thumb:hover{
+
+    background:#1D4ED8;
+
+}
+
+/* ===========================
+   Selection
+=========================== */
+
+body.light-theme ::selection{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+/* ===========================
+   Smooth Transition
+=========================== */
+
+body.light-theme,
+body.light-theme header,
+body.light-theme .card,
+body.light-theme footer,
+body.light-theme .btn,
+body.light-theme input,
+body.light-theme textarea{
+
+    transition: all .35s ease;
+
+}

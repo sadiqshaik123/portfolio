@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Shaik Sadiq</title>
+<link rel="icon" type="image/svg+xml" href="assets/images/dev-favicon.svg">
+<link rel="apple-touch-icon" href="assets/images/dev-favicon.svg">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/dark-theme.css">
+<link rel="stylesheet" href="assets/css/light-theme.css">
+<link rel="stylesheet" href="assets/css/navbar.css">
+<link rel="stylesheet" href="assets/css/cards.css?v=20260802p">
+<link rel="stylesheet" href="assets/css/buttons.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="dark-theme">
+
+<header>
+<div class="nav-container">
+<a href="index.html" class="logo">
+<img src="assets/images/profile.png" alt="Shaik Sadiq">
+<h2>Shaik <span>Sadiq</span></h2>
+</a>
+
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="projects.html" class="active">Projects</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="certifications.html">Certifications</a></li>
+<li><a href="achievements.html">Achievements</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+<div class="nav-right">
+<button class="theme-toggle">☀️</button>
+<a class="resume-btn" href="resume/Shaik_Sadiq_Resume.pdf">Resume</a>
+<div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+</div>
+</div>
+</header>
+
+<section style="padding-top:140px">
+<div class="container">
+
+<h1 class="section-title reveal">Projects</h1>
+<p class="section-subtitle reveal">
+Enterprise Java Backend and Generative AI projects.
+</p>
+
+<div class="cards-grid">
+
+<div class="card project-card reveal">
+<div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+<h2 class="card-title">Squad Navigator – Enterprise Innovation Assistant</h2>
+<p class="card-description">
+Enterprise Generative AI platform enabling employees to discover innovation ideas,
+onboard new use cases and automate innovation workflows using LLMs, FastAPI and RAG.
+</p>
+<div class="tech-stack">
+<span>Python</span><span>FastAPI</span><span>LangChain</span>
+<span>LLM</span><span>RAG</span><span>PostgreSQL</span>
+</div>
+<div class="card-buttons">
+<button type="button" class="btn btn-primary project-details-btn" data-project="squad-navigator">View Details</button>
+</div>
+</div>
+
+<div class="card project-card reveal">
+<div class="card-icon"><i class="fa-solid fa-receipt"></i></div>
+<h2 class="card-title">Enterprise Digital Receipts</h2>
+<p class="card-description">
+Enterprise-scale backend platform for secure digital receipt processing,
+partner integrations, REST APIs, authentication and production support.
+</p>
+<div class="tech-stack">
+<span>Java</span><span>Spring Boot</span><span>Vert.x</span>
+<span>Docker</span><span>Kubernetes</span><span>PostgreSQL</span>
+</div>
+<div class="card-buttons">
+<button type="button" class="btn btn-primary project-details-btn" data-project="digital-receipts">View Details</button>
+</div>
+</div>
+
+<div class="card project-card reveal">
+<div class="card-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+<h2 class="card-title">AI-Powered Incident Resolution Assistant</h2>
+<p class="card-description">
+Multi-agent Generative AI platform that analyzes application errors,
+masks secrets, retrieves historical incidents using RAG and recommends
+ranked solutions.
+</p>
+<div class="tech-stack">
+<span>Python</span><span>FastAPI</span><span>LLMs</span>
+<span>Multi-Agent AI</span><span>RAG</span>
+</div>
+<div class="card-buttons">
+<button type="button" class="btn btn-primary project-details-btn" data-project="incident-resolution">View Details</button>
+</div>
+</div>
+
+<div class="card project-card reveal">
+<div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+<h2 class="card-title">AI Friday Innovation Challenge</h2>
+<p class="card-description">
+Award-winning enterprise AI prototype built during the AI Friday Hackathon
+using multiple AI agents and Retrieval Augmented Generation.
+</p>
+<div class="tech-stack">
+<span>Python</span><span>Generative AI</span>
+<span>RAG</span><span>LLMs</span>
+</div>
+<div class="card-buttons">
+<button type="button" class="btn btn-primary project-details-btn" data-project="ai-friday">View Details</button>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<div class="modal-overlay" id="projectModalOverlay" hidden></div>
+<div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" hidden>
+<button class="project-modal-close" id="projectModalClose" aria-label="Close project details">×</button>
+<div class="project-modal-content">
+<p class="project-modal-meta" id="projectModalMeta"></p>
+<h3 id="projectModalTitle"></h3>
+<div class="project-modal-tech" id="projectModalTech"></div>
+<ul id="projectModalList"></ul>
+</div>
+</div>
+
+<footer>
+<div class="footer-container">
+<div class="footer-bottom">
+<p>© <span id="year"></span> Shaik Sadiq. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+
+<script src="assets/js/theme.js?v=20260802p"></script>
+<script src="assets/js/navbar.js?v=20260802p"></script>
+<script src="assets/js/animations.js?v=20260802p"></script>
+<script src="assets/js/script.js?v=20260802p"></script>
+</body>
+</html>

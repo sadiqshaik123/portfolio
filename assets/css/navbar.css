@@ -1,0 +1,396 @@
+/* ==========================================================
+   NAVBAR.CSS
+   Shaik Sadiq Portfolio
+========================================================== */
+
+/* ==========================
+   Header
+========================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(15,23,42,.75);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.35s ease;
+
+}
+
+/* Added by JS while scrolling */
+
+header.scrolled{
+
+    background:rgba(2,6,23,.95);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+/* ==========================
+   Navigation Container
+========================== */
+
+.nav-container{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:15px 30px;
+}
+
+/* ==========================
+   Logo
+========================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+}
+
+.logo img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+}
+
+.logo h2{
+
+    font-size:22px;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+.logo:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================
+   Navigation Menu
+========================== */
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    list-style:none;
+    margin-left:auto;
+    flex-wrap:nowrap;
+}
+
+.nav-menu li{
+
+    position:relative;
+
+}
+
+.nav-menu li a{
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    padding:8px 0;
+
+}
+
+/* Hover */
+
+.nav-menu li a:hover{
+
+    color:var(--primary);
+
+}
+
+/* Animated Underline */
+
+.nav-menu li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+.nav-menu li a:hover::after,
+
+.nav-menu li a.active::after{
+
+    width:100%;
+
+}
+
+.nav-menu li a.active{
+
+    color:var(--primary);
+
+}
+
+/* ==========================
+   Right Side
+========================== */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-shrink:0;
+}
+
+/* ==========================
+   Theme Button
+========================== */
+
+.theme-toggle{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:var(--card);
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.3s;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+.theme-toggle:hover{
+
+    transform:rotate(180deg);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==========================
+   Resume Button
+========================== */
+
+.resume-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    background:#2563EB;
+
+    color:#ffffff !important;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    border:none;
+
+}
+
+.resume-btn:hover{
+
+    background:#1D4ED8;
+
+    color:#ffffff !important;
+
+}
+
+/* ==========================
+   Mobile Menu Icon
+========================== */
+
+.menu-toggle{
+
+    display:none;
+
+    cursor:pointer;
+
+    font-size:28px;
+
+    color:var(--text);
+
+    transition:transform .3s ease, color .3s ease;
+
+}
+
+.menu-toggle.active{
+
+    color:var(--primary);
+
+    transform:rotate(90deg);
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.nav-menu{
+
+    position:fixed;
+
+    top:80px;
+
+    right:-100%;
+
+    width:280px;
+
+    height:calc(100vh - 80px);
+
+    background:var(--card);
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:flex-start;
+
+    padding:40px 25px;
+
+    gap:25px;
+
+    transition:.4s ease;
+
+    box-shadow:-10px 0 25px rgba(0,0,0,.15);
+
+}
+
+.nav-menu.active{
+
+    right:0;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.resume-btn{
+
+    display:none;
+
+}
+
+}
+
+/* ==========================
+   Mobile Small Devices
+========================== */
+
+@media(max-width:576px){
+
+.nav-container{
+
+    padding:0 18px;
+
+}
+
+.logo h2{
+
+    font-size:22px;
+
+}
+
+.logo img{
+
+    width:40px;
+
+    height:40px;
+
+}
+
+.theme-toggle{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+}
+
+/* ==========================
+   Smooth Animation
+========================== */
+
+.nav-menu li,
+.logo,
+.resume-btn,
+.theme-toggle{
+
+    transition:all .3s ease;
+
+}

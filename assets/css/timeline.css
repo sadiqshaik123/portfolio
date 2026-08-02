@@ -1,0 +1,609 @@
+/* ==========================================================
+   TIMELINE.CSS
+   Shaik Sadiq Portfolio
+========================================================== */
+
+/* ===========================
+   Timeline Container
+=========================== */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    padding-left: 60px;
+
+}
+
+/* Vertical Line */
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 22px;
+
+    top: 0;
+
+    width: 4px;
+
+    height: 100%;
+
+    background: linear-gradient(
+        to bottom,
+        var(--primary),
+        var(--secondary),
+        var(--accent)
+    );
+
+    border-radius: 20px;
+
+}
+
+/* ===========================
+   Timeline Item
+=========================== */
+
+.timeline-item {
+
+    position: relative;
+
+    margin-bottom: 60px;
+
+}
+
+/* Timeline Circle */
+
+.timeline-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -49px;
+
+    top: 18px;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    border: 5px solid var(--bg);
+
+    box-shadow: 0 0 18px rgba(37,99,235,.4);
+
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.timeline-card {
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    transition: .35s ease;
+
+    box-shadow: var(--shadow);
+
+}
+
+.timeline-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--primary);
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.timeline-header {
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+/* Logos */
+
+.timeline-logos {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+}
+
+.timeline-logo {
+
+    width: 72px;
+
+    height: 72px;
+
+    object-fit: contain;
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    padding: 10px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+
+}
+
+.timeline-logo--client {
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+}
+
+/* Header Brand */
+
+.timeline-header-brand {
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+
+}
+
+.timeline-logo-badge {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.18);
+    flex-shrink: 0;
+
+}
+
+.timeline-header-content {
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+.timeline-badges {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+
+}
+
+.timeline-stat {
+
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.16);
+    color: var(--text-light);
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.timeline-stat--highlight {
+
+    background: rgba(37, 99, 235, 0.14);
+    color: var(--primary);
+    font-weight: 700;
+
+}
+
+/* Title */
+
+.timeline-title {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+}
+
+.timeline-title i {
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+}
+
+/* Role */
+
+.timeline-role {
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    margin-top: 5px;
+
+}
+
+/* Duration */
+
+.timeline-date {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(37,99,235,.12);
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+/* Location */
+
+.timeline-location {
+
+    margin-top: 10px;
+
+    color: var(--text-light);
+
+    font-size: 15px;
+
+}
+
+/* ===========================
+   Description
+=========================== */
+
+.timeline-description {
+
+    margin-top: 25px;
+
+}
+
+.timeline-description ul {
+
+    padding-left: 20px;
+
+}
+
+.timeline-description li {
+
+    margin-bottom: 12px;
+
+    color: var(--text-light);
+
+    line-height: 1.8;
+
+}
+
+/* ===========================
+   Technologies
+=========================== */
+
+.timeline-tech {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+.timeline-tech span {
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    background: rgba(37,99,235,.10);
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+/* ===========================
+   Achievement Badge
+=========================== */
+
+.timeline-badge {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 10px 18px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+/* ===========================
+   Connector Animation
+=========================== */
+
+.timeline-item::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: -41px;
+
+    top: 36px;
+
+    width: 2px;
+
+    height: calc(100% + 30px);
+
+    background: rgba(37,99,235,.25);
+
+}
+
+.timeline-item:last-child::after {
+
+    display: none;
+
+}
+
+/* ===========================
+   Hover Animation
+=========================== */
+
+.timeline-card:hover .timeline-logo {
+
+    transform: scale(1.08);
+
+    transition: .3s;
+
+}
+
+/* ===========================
+   Fade Animation
+=========================== */
+
+.timeline-item {
+
+    animation: timelineFade .8s ease;
+
+}
+
+@keyframes timelineFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.timeline{
+
+padding-left:45px;
+
+}
+
+.timeline-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.timeline-logo{
+
+width:60px;
+
+height:60px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.timeline{
+
+padding-left:35px;
+
+}
+
+.timeline::before{
+
+left:14px;
+
+}
+
+.timeline-item::before{
+
+left:-28px;
+
+}
+
+.timeline-item::after{
+
+left:-20px;
+
+}
+
+.timeline-card{
+
+padding:22px;
+
+}
+
+.timeline-title{
+
+font-size:20px;
+
+}
+
+.timeline-tech{
+
+justify-content:flex-start;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.timeline{
+
+padding-left:25px;
+
+}
+
+.timeline::before{
+
+left:10px;
+
+}
+
+.timeline-item::before{
+
+left:-22px;
+
+width:15px;
+
+height:15px;
+
+}
+
+.timeline-item::after{
+
+left:-15px;
+
+}
+
+.timeline-card{
+
+padding:18px;
+
+}
+
+.timeline-logo{
+
+width:50px;
+
+height:50px;
+
+}
+
+.timeline-title{
+
+font-size:18px;
+
+}
+
+.timeline-date{
+
+font-size:13px;
+
+}
+
+.timeline-tech span{
+
+font-size:12px;
+
+padding:6px 12px;
+
+}
+
+}

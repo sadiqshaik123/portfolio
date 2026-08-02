@@ -1,0 +1,504 @@
+/* ==========================================================
+   BUTTONS.CSS
+   Shaik Sadiq Portfolio
+========================================================== */
+
+/* ==============================
+   Common Button
+================================ */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:all .35s ease;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+/* ==============================
+   Primary Button
+================================ */
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+/* ==============================
+   Secondary Button
+================================ */
+
+.btn-secondary{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+.btn-secondary:hover{
+
+    background:#6D28D9;
+
+    transform:translateY(-4px);
+
+}
+
+/* ==============================
+   Outline Button
+================================ */
+
+.btn-outline{
+
+    background:transparent;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==============================
+   Ghost Button
+================================ */
+
+.btn-ghost{
+
+    background:transparent;
+
+    color:var(--text);
+
+}
+
+.btn-ghost:hover{
+
+    background:rgba(37,99,235,.10);
+
+}
+
+/* ==============================
+   Success Button
+================================ */
+
+.btn-success{
+
+    background:#16A34A;
+
+    color:#fff;
+
+}
+
+.btn-success:hover{
+
+    background:#15803D;
+
+}
+
+/* ==============================
+   Danger Button
+================================ */
+
+.btn-danger{
+
+    background:#DC2626;
+
+    color:#fff;
+
+}
+
+.btn-danger:hover{
+
+    background:#B91C1C;
+
+}
+
+/* ==============================
+   Download Button
+================================ */
+
+.btn-download{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+}
+
+.btn-download:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.30);
+
+}
+
+/* ==============================
+   Hire Me Button
+================================ */
+
+.btn-hire{
+
+    background:#14B8A6;
+
+    color:#fff;
+
+}
+
+.btn-hire:hover{
+
+    background:#0D9488;
+
+}
+
+/* ==============================
+   Small Button
+================================ */
+
+.btn-sm{
+
+    padding:10px 18px;
+
+    font-size:14px;
+
+}
+
+/* ==============================
+   Large Button
+================================ */
+
+.btn-lg{
+
+    padding:18px 38px;
+
+    font-size:18px;
+
+}
+
+/* ==============================
+   Rounded Button
+================================ */
+
+.btn-round{
+
+    border-radius:50px;
+
+}
+
+/* ==============================
+   Icon Button
+================================ */
+
+.btn-icon{
+
+    width:55px;
+
+    height:55px;
+
+    padding:0;
+
+    border-radius:50%;
+
+    font-size:20px;
+
+}
+
+/* ==============================
+   Ripple Effect
+================================ */
+
+.btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:translate(-50%,-50%);
+
+    transition:.6s;
+
+}
+
+.btn:hover::after{
+
+    width:320px;
+
+    height:320px;
+
+}
+
+/* ==============================
+   Shine Effect
+================================ */
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:50%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:skewX(-25deg);
+
+}
+
+.btn:hover::before{
+
+    animation:shine .8s;
+
+}
+
+@keyframes shine{
+
+    100%{
+
+        left:150%;
+
+    }
+
+}
+
+/* ==============================
+   Disabled
+================================ */
+
+.btn:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+/* ==============================
+   Button Group
+================================ */
+
+.button-group{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==============================
+   Full Width Button
+================================ */
+
+.btn-block{
+
+    width:100%;
+
+}
+
+/* ==============================
+   Loading Button
+================================ */
+
+.btn-loading{
+
+    pointer-events:none;
+
+    opacity:.8;
+
+}
+
+.btn-loading::before{
+
+    content:"";
+
+    width:18px;
+
+    height:18px;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    border-top:2px solid #fff;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==============================
+   Floating Action Button
+================================ */
+
+.fab{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:24px;
+
+    box-shadow:0 12px 30px rgba(37,99,235,.35);
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.fab:hover{
+
+    transform:translateY(-6px) rotate(15deg);
+
+}
+
+/* ==============================
+   Responsive
+================================ */
+
+@media(max-width:768px){
+
+.button-group{
+
+    flex-direction:column;
+
+}
+
+.btn{
+
+    width:100%;
+
+}
+
+.btn-icon{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+.fab{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:80px;
+
+    width:60px;
+
+    height:60px;
+
+    z-index:999;
+
+}
+
+}
